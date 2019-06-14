@@ -8,6 +8,9 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+              crossorigin="anonymous">
 
         <!-- Styles -->
         <style>
@@ -64,7 +67,8 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+{{--        <div class="flex-center position-ref full-height">--}}
+        <div class="position-ref full-height pt-3">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -80,18 +84,13 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
+{{--                <div class="title m-b-md">--}}
+{{--                    Books and Authors--}}
+{{--                </div>--}}
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="{{ route('authors.list') }}">Authors</a>
+                    <a href="{{ route('books.list') }}">Books</a>
                 </div>
             </div>
         </div>
