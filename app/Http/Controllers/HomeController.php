@@ -13,7 +13,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth')->except('getHomePage');
+        $this->middleware('auth')->except('welcomePage');
     }
 
     /**
@@ -28,7 +28,7 @@ class HomeController extends Controller
 
     public function welcomePage()
     {
-        return view('welcomePage');
+        return view('welcome');
     }
 
 }
