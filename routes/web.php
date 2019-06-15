@@ -34,10 +34,10 @@ Route::group(['prefix' => 'books'], function () {
 
 Route::group(['prefix' => 'authors'], function () {
     Route::get('', 'AuthorsController@index')->name('authors.list');
-    Route::get('create', 'AuthorsController@create')->name('book.create');
-    Route::post('', 'AuthorsController@store')->name('book.store');
-    Route::get('{id}', 'AuthorsController@show')->name('book.show');
-    Route::get('{id}/edit', 'AuthorsController@edit')->name('book.edit');
-    Route::put('{id}', 'AuthorsController@update')->name('book.update');
-    Route::delete('{id}', 'AuthorsController@destroy')->name('book.destroy');
+    Route::get('create', 'AuthorsController@create')->name('author.create');
+    Route::post('', 'AuthorsController@store')->name('author.store');
+    Route::get('{id}', 'AuthorsController@show')->name('author.show');
+    Route::get('{id}/edit', 'AuthorsController@edit')->name('author.edit');
+    Route::put('{id}', 'AuthorsController@update')->name('author.update');
+    Route::delete('{id}', 'AuthorsController@destroy')->name('author.destroy');
 });
