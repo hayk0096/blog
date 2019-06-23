@@ -16,7 +16,8 @@ class CreateBooksTable extends Migration
         Schema::create('books', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('avatar');
+            $table->longText('context')->nullable();
+            $table->string('avatar')->nullable()->default('images/not_available.png');
 
             $table->bigInteger('author_id')->unsigned()->nullable();
             $table->foreign('author_id')

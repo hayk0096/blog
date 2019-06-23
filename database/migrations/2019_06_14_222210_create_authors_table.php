@@ -16,8 +16,15 @@ class CreateAuthorsTable extends Migration
         Schema::create('authors', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('full_name');
-            $table->text('bio');
-            $table->string('avatar');
+            $table->text('bio')->nullable();
+            $table->string('avatar')->nullable()->default('images/not_available_author.jpg');
+
+            $table->bigInteger('user_id')->unsigned();
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
+
             $table->timestamps();
         });
     }
