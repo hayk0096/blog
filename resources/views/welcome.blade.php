@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
               crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/favicon.png') }}">
 
@@ -27,7 +28,14 @@
                 height: 100vh;
                 margin: 0;
             }
+            .error-message {
+                color: #da542e;
+                font-weight: bold;
+                font-style: italic;
+                font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            }
         </style>
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <link rel="stylesheet" href="{{ asset('css/book.css') }}">
         @yield('css')
     </head>
@@ -53,17 +61,13 @@
             @endif
 
             <div class="content">
-{{--                <div class="title m-b-md">--}}
-{{--                    Books and Authors--}}
-{{--                </div>--}}
-
                 <div class="links">
                     <a href="{{ route('books.list') }}" class="{{ preg_match('/(book*)/m', $route) ? 'active' : '' }}">Books</a>
                     <a href="{{ route('authors.list') }}" class="{{ preg_match('/(author*)/m', $route) ? 'active' : '' }}">Authors</a>
                 </div>
 
-                <div class="container">
-                    <div id="content">
+                <div class="container" id="content">
+                    <div class="row justify-content-center mt-5">
                         @yield('content')
                     </div>
                 </div>
