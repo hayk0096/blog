@@ -45,3 +45,15 @@
 .m-b-md {
     margin-bottom: 30px;
 }
+
+.card {
+    background-color: #ffffffc2;
+}
+.form-control {
+    background-color: #ffffff00;
+    border: 1px solid #7c7d7d;
+}
+
+.form-control:focus {
+    background-color: #ffffff45;
+}
