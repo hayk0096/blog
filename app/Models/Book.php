@@ -10,7 +10,8 @@ class Book extends Model
     protected $fillable = [
         'name',
         'avatar',
-        'author_id'
+        'author_id',
+        'user_id'
     ];
 
     protected $table = 'books';
