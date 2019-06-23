@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header d-flex justify-content-between">
                     {{ __('Login') }}
-                    <span>Before add a book, please log in.</span>
+                    <span>Before add a book or author, please log in.</span>
                 </div>
 
                 <div class="card-body">
